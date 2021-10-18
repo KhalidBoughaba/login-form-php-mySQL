@@ -1,3 +1,4 @@
+
 <head>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href = "./css/style.css" >
@@ -5,7 +6,7 @@
 
 <body>
     <div class="container">
-        <form class = "form mt-4 rounded p-4 w-50" action = "addMembers.php" method = "POST">
+        <form class = "form mt-4 rounded p-4 w-50" action = "index.php" method = "POST">
             <div class = "col">
                 <input class = "form-control mb-4 " type = "text" name = "first_name" placeholder = "First Name">
             </div>
