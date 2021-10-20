@@ -5,7 +5,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-  background-image: url('home.jpg');
+  background-image: url('./home1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
