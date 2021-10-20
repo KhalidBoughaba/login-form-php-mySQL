@@ -1,21 +1,15 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href = "./css/style.css" >
+    <?php include "link.php";
+    include "conn.php"; ?>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
 </head>
-
 <body>
-    <div class="container">
-        <form class = "form mt-4 rounded p-4 w-50" action = "index.php" method = "POST">
-            <div class = "col">
-                <input class = "form-control mb-4 " type = "text" name = "first_name" placeholder = "First Name">
-            </div>
-
-            <div class = "col">
-                <input class = "form-control mb-4 " type = "text" name = "last_name" placeHolder = "Last Name">
-            </div>
-
-            <input type = "submit" class = "btn btn-primary ml-3">
-        </form>
-    </div>
+<?php require "navbar.php"; ?>
+<div class="headline"><h1>Welcome to simple login/sign up form and navigation menu bar using html,css,php and mysqli.  </h1></div>
 </body>
+</html>
