@@ -1,21 +1,41 @@
 
+<?php include('server.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href = "./css/style.css" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>regester php mysql</title>
 </head>
-
 <body>
-    <div class="container">
-        <form class = "form mt-4 rounded p-4 w-50" action = "index.php" method = "POST">
-            <div class = "col">
-                <input class = "form-control mb-4 " type = "text" name = "first_name" placeholder = "First Name">
-            </div>
+    <?php require "navbar.php"; ?>
 
-            <div class = "col">
-                <input class = "form-control mb-4 " type = "text" name = "last_name" placeHolder = "Last Name">
-            </div>
+    <div class="header">
+        
+        <h2>
+            Home page 
+        </h2>
+    </div>
+    <div class="content">
+        <?php  if (isset($_SESSION['success'])):?>
+            <div class="error success"></div>
+             <h3>
+                 <?php
+                    echo $_SESSION['success'];
+                    unset ($_SESSION['success']);
+                 ?>
 
-            <input type = "submit" class = "btn btn-primary ml-3">
-        </form>
+             </h3>
+        <?php endif ?>
+
+        <?php if  (isset($_SESSION["username"])):  ?>
+            <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+            <p> <strong><?php echo $_SESSION['stater']; ?></strong></p>
+            <p > <a href="index.php?logout='1'" style="color:red;">Logout</a> </p>
+        <?php endif ?>
     </div>
 </body>
+</html>
